@@ -1,0 +1,20 @@
+def grading_sys(grades):
+    if grades >= 90 and grades <= 100:
+        return "excellent!You did a great job!"
+    elif grades >= 80 and grades <= 89:
+        return "Good job! Keep it up!"
+    if grades >= 70 and grades <= 79:
+        return" you pass but there's room for improvement" 
+    elif grades < 70:
+        return " you failed, beeter luch next time"
+
+    else:
+        return " invalid Grades"
+    
+grades = int(input(" grade reveal: "))
+
+print(grading_sys(grades))
+    
+    
+    
+    
