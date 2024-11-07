@@ -1,0 +1,68 @@
+data = ["harry", "jhon", "barcelona", "ragot"]
+
+def show_all_data():
+    print(data)
+
+def add_single_data():
+    ask = input("Enter Data: ")
+    data.append(ask)
+    print(data)
+    
+def add_multiple_data():
+    No = int(input("How many Data Entries do you wanna add? "))
+    for i in range(No):
+        Data = input("Enter Data: ")
+        data.append(Data)
+        print(data)
+        
+def delete_data():
+    print(data)
+    remove = input("Select the data you wish to remove: ")
+    data.remove(remove)
+    print(data)
+
+def delete_all_data():
+    data.clear()
+    print(data)
+    
+def update_data():
+    ASK = input("Do you wish to update the data? ")
+    match ASK:
+        case "yes":
+            print(data)
+            what = input("What data you want to enter: ")
+            data.append(what)
+            no = input("Which data do you want to remove? ")
+            data.remove(no)
+            print(data)
+                    
+        case "no":
+            print("edi wow")
+
+print("- - - - - Menu - - - - - -")
+print(" Press (1) SHOW ALL DATA")
+print(" Press (2) ADD SINGLE DATA")
+print(" Press (3) ADD MULTIPLE DATA")
+print(" Press (4) DELETE DATA")
+print(" Press (5) DELETE ALL DATA")
+print(" Press (6) UPDATE DATA")
+
+
+Input = input("Choose a Function: ")
+
+match Input:
+    case "1":
+        show_all_data()
+    case "2":
+        add_single_data()
+    case "3":
+        add_multiple_data()
+    case "4":
+        delete_data()
+    case "5":
+        delete_all_data()
+    case "6":
+        update_data()
+    case _:
+        print("Error")
+        
